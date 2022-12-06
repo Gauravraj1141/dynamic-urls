@@ -35,3 +35,11 @@ def superhome(request, my_id, my_subid, my_superid):
 
 def show(request):
     return render(request, 'dyapp/links.html')
+
+
+# Here we make our converter function
+
+def converterpath(request, fivedigits):
+
+    context = {"digits": fivedigits}
+    return render(request, "dyapp/converter.html", context)
